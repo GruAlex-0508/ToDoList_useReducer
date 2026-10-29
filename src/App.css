@@ -1,0 +1,117 @@
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+
+/* Style the header */
+.header {
+  background-color: #f44336;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.input {
+  margin: 0;
+  border: none;
+  width: 75%;
+  min-width: 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+.toDo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.toDo-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+.toDo-item:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+.toDo-item:hover {
+  background: #ddd;
+}
+
+.toDo-item.checked {
+  background: #888;
+  color: #fff;
+}
+
+.toDo-item.checked .toDo-text {
+  text-decoration: line-through;
+}
+
+.toDo-item.checked::before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.toDo-item input {
+  width: auto;
+  margin: 0 12px 0 0;
+}
+
+.toDo-text {
+  flex: 1;
+  min-width: 0;
+  padding: 0 0 0 40px;
+  overflow-wrap: anywhere;
+}
+
+.delete-button {
+  border: 0;
+  padding: 12px 16px;
+  background: transparent;
+  color: inherit;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.form {
+  display: flex;
+}
